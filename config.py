@@ -13,8 +13,11 @@ directory = str(path)
 
 # ADD SETTINGS TO SECTION
 config_file.set("path", "banner", directory + "/Banner/ascii.txt")
-config_file.set("path", "dict", directory + "/Input/input.txt")
-config_file.set("path", "outfile", directory + "/Output/output.txt")
+config_file.set("path", "input", directory + "/Input/input.txt")
+config_file.set("path", "temp", directory + "/temp/temp.txt")
+config_file.set("path", "temp1", directory + "/temp/temp1.txt")
+config_file.set("path", "temp2", directory + "/temp/temp2.txt")
+config_file.set("path", "output", directory + "/Output/output.txt")
 config_file.set("path", "home", directory)
 
 # SAVE CONFIG FILE
