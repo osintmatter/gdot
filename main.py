@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+
+
 from os.path import exists as file_exists
 import hashlib
 import re
