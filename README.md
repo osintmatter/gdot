@@ -1,17 +1,3 @@
-<br/>
-<p align="center">
-  <h3 align="center">Hunt Gmail alias in one click. </h3>
-
-  <p align="center">
-    GDOT, a simple 100% python script that automatically detects google e-mails that use one or more of the techniques described in this article.
-    <br/>
-    <br/>
-  </p>
-</p>
-
-![Downloads](https://img.shields.io/github/downloads/Osintmatter /GDot/total) ![Contributors](https://img.shields.io/github/contributors/Osintmatter /GDot?color=dark-green) ![Issues](https://img.shields.io/github/issues/Osintmatter /GDot) ![License](https://img.shields.io/github/license/Osintmatter /GDot) 
-
- 
 
 ## Getting Started
 
@@ -22,12 +8,13 @@ The data and result are of course shared and analysed exclusively on your runnin
 
 Python 3 
 
+
 ### Installation
 
 1. Clone the repo
 
 ```sh
-git clone https://github.com/osintmatter/GDot.git
+git clone https://github.com/osintmatter/gdot.git
 ```
 Or download .zip and unzip it on local folder 
 
@@ -40,9 +27,9 @@ Or download .zip and unzip it on local folder
 ### Creating A Pull Request
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch 
+3. Commit your Changes 
+4. Push to the Branch 
 5. Open a Pull Request
 
 ## Authors
