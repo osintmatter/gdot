@@ -1,4 +1,14 @@
 
+```sh
+____  ____  ____  ____ 
+||G ||||D ||||o ||||t ||
+||__||||__||||__||||__||
+|/__\||/__\||/__\||/__\|   V0.1
+
+BY OSINTMATTER 
+
+```
+
 ## Getting Started
 
 Gdot analysis is based on list of email addresses. You need to copy a list of target email addresses into the input.txt file you will generate after launching the config.py script. 
