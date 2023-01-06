@@ -14,7 +14,7 @@ directory = str(path)
 input_folder = "input"
 temp_folder = "temp"
 out_folder = "output"
-banner_folder = "banner"
+
 
 path1 = os.path.join(directory, input_folder)
 os.mkdir(path1)
@@ -22,17 +22,16 @@ path2 = os.path.join(directory, temp_folder)
 os.mkdir(path2)
 path3 = os.path.join(directory, out_folder)
 os.mkdir(path3)
-path4 = os.path.join(directory, banner_folder)
-os.mkdir(path4)
+
 
 # ADD SETTINGS TO SECTION
-config_file.set("path", "banner", directory + "/banner/ascii.txt")
+
 config_file.set("path", "input", directory + "/input/input.txt")
 config_file.set("path", "temp", directory + "/temp/temp.txt")
 config_file.set("path", "temp1", directory + "/temp/temp1.txt")
 config_file.set("path", "temp2", directory + "/temp/temp2.txt")
 config_file.set("path", "output", directory + "/output/output.txt")
-config_file.set("path", "home", directory)
+
 
 
 # SAVE CONFIG FILE
