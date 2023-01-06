@@ -7,6 +7,9 @@ import re
 import os
 import configparser
 import sys
+import colorama
+from colorama import Fore, Style
+
 
 config = configparser.ConfigParser()
 config.read("config.ini")
@@ -24,7 +27,17 @@ settingscfg = config["path"]
 def is_non_zero_file(fpath):  
     return os.path.isfile(fpath) and os.path.getsize(fpath) > 0
 
-print('Welcome to GDot!\n please remember to compile the blank input.txt with the emails list you eant to analyze...')
+print(Fore.RED + r"""
+____  ____  ____  ____ 
+||G ||||D ||||o ||||t ||
+||__||||__||||__||||__||
+|/__\||/__\||/__\||/__\|   V0.1
+
+BY OSINTMATTER 
+""")
+print(Style.RESET_ALL)
+
+print('Welcome to GDot!')
 while True:
     question = (input('Have you compiled the blank input.txt with the emails list you want to analyze? (y: Yes, n: No)'))
     question = question.lower()
@@ -78,14 +91,11 @@ else:
 
         #find duplicated usernames 
 
-        output_file_path = (config.get("path", "temp2"),'r') 
-        input_file_path = (config.get("path", "temp1"),'r') 
-
         completed_lines_hash = set()
 
-        output_file = open(output_file_path, "w+")
+        output_file = open(config.get("path", "temp2"),'w+') 
 
-        for line in open(input_file_path, "r"):
+        for line in open(config.get("path", "temp1"),'r') :
 
           hashValue = hashlib.md5(line.rstrip().encode('utf-8')).hexdigest()
 
@@ -98,27 +108,27 @@ else:
 output_file.close()
 
 #print usernames with Google alias abuse 
-final_print = open(config.get("path", "temp2"),'r') 
-if os.path.getsize((config.get("path", "temp2"),'r') > 0):
-
+final_print = open(config.get("path", "temp2"),'r+') 
+if is_non_zero_file(config.get("path", "temp2")):
+  print(Fore.RED)
   s1= 'username:'+''.join(final_print.read())
   s2="I found these usernames abusing Gmail alias using DOT technique:\n"
   s3 = "domain : @gmail.com OR googlemail.com"
-  s4="\n these user has created more than one account using the same Google UUID"
+  s4="these user has created more than one account using the same Google UUID:\n"
+  
 
-  results = print(s2,s1,s3,s4)
+  results = print(s2,s1,s3)
   with open(config.get("path", "output"), 'w+') as f:
-    f.write(str.results)
-    print(results)
-
+    with open(config.get("path", "temp2")) as g:
+        for line in g:
+            f.write(s4+line)
+  print(Style.RESET_ALL)
 else:
-
-  print('No gmail alias found!')
+  print(Fore.GREEN)
+  print('Good news: No gmail alias found!')
             
 #clean-up of files 
 
 os.remove(config.get("path", "temp"))
 os.remove(config.get("path", "temp1"))
 os.remove(config.get("path", "temp2"))
-
-
