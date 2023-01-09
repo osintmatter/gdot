@@ -30,9 +30,12 @@ Or download .zip and unzip it on local folder
 
 3. Execute on terminal python3 config.py
 
-4. Execute on terminal python3 requirements.py 
+4. on gdot folder open terminal and execute ```sh
+pip install -r requirements.txt 
+```
+5. Execute on terminal python3 requirements.py 
 
-5. Launch main.py to run Gdot 
+6. Launch main.py to run Gdot 
 
 ### Creating A Pull Request
 
