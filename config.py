@@ -24,14 +24,15 @@ path3 = os.path.join(directory, out_folder)
 os.mkdir(path3)
 
 
-# ADD SETTINGS TO SECTION
 
+# ADD SETTINGS TO SECTION
+config_file.set("path", "banner", directory + "/banner/ascii.txt")
 config_file.set("path", "input", directory + "/input/input.txt")
 config_file.set("path", "temp", directory + "/temp/temp.txt")
 config_file.set("path", "temp1", directory + "/temp/temp1.txt")
 config_file.set("path", "temp2", directory + "/temp/temp2.txt")
 config_file.set("path", "output", directory + "/output/output.txt")
-
+config_file.set("path", "home", directory)
 
 
 # SAVE CONFIG FILE
@@ -49,3 +50,5 @@ print("Content of the config file are:\n")
 print(content)
 read_file.flush()
 read_file.close()
+os.chdir(path1)
+file1 = open("input.txt", "w+")
