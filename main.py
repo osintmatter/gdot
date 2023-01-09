@@ -122,7 +122,9 @@ if is_non_zero_file(config.get("path", "temp2")):
     with open(config.get("path", "temp2")) as g:
         for line in g:
             f.write(s4+line)
+  
   print(Style.RESET_ALL)
+  print("see the results into /output/output.txt file")
 else:
   print(Fore.GREEN)
   print('Good news: No gmail alias found!')
